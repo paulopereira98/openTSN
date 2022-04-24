@@ -1,13 +1,13 @@
-﻿版本说明：
-FPGA_OS_1in_1out：此FPGA_OS的版本与UM的接口为1组输入1组输出的版本，其中CPU与端口的输入分组数据先经过MUX进行汇聚后输入给UM，输出时输出分组通过DMUX模块分配给CPU或不同端口。
+Release Notes:
+FPGA_OS_1in_1out: The interface between the FPGA_OS version and the UM is a version with 1 input and 1 output. The input packet data of the CPU and the port are first aggregated by the MUX and then input to the UM. When outputting, the output packet is allocated to the CPU through the DMUX module or different. port.
 
-FPGA_OS_1in_4out：此FPGA_OS的版本与UM的接口为1组输入4组输出的版本，无CPU的通路，端口的输入分组数据先经过MUX进行汇聚后输入给UM，输出时输出分组由UM控制输出给不同端口。
+FPGA_OS_1in_4out: The interface between this version of FPGA_OS and UM is a version with 1 input and 4 outputs. There is no CPU path. The input packet data of the port is first aggregated by MUX and then input to UM. When outputting, the output packet is controlled by UM and output to different port.
 
-FPGA_OS_5in_5out：此FPGA_OS的版本与UM的接口为5组输入5组输出的版本，其中5组接口分别为1组CPU2UM/UM2CPU，4组PORTx2UM/UM2PORTx（x为0-3）。
+FPGA_OS_5in_5out: The interface between this FPGA_OS version and UM is a version with 5 sets of input and 5 sets of output, of which the 5 sets of interfaces are 1 set of CPU2UM/UM2CPU and 4 sets of PORTx2UM/UM2PORTx (x is 0-3).
 
-FPGA_OS_5in_5out_mac：此FPGA_OS的版本与UM的接口为5组输入5组输出的版本，其中5组接口分别为1组CPU2UM/UM2CPU，4组PORTx2UM/UM2PORTx（x为0-3）,新增设备MAC地址配置功能。
+FPGA_OS_5in_5out_mac: The interface between this FPGA_OS version and UM is a version with 5 sets of input and 5 sets of output, of which the 5 sets of interfaces are respectively 1 set of CPU2UM/UM2CPU, 4 sets of PORTx2UM/UM2PORTx (x is 0-3), new device MAC address configuration function.
 
-FPGA_OS_5in_5out_tsnnic：此FPGA_OS版本为TSN_NIC接口定制版本 , UM的接口为5组输入5组输出，其中5组接口分别为1组CPU2UM/UM2CPU，4组PORTx2UM/UM2PORTx（x为0-3，其中1号口输出报文第4拍中包含时间戳标识。
+FPGA_OS_5in_5out_tsnnic: This FPGA_OS version is a customized version of the TSN_NIC interface. The UM interface is 5 sets of input and 5 sets of output, of which the 5 sets of interfaces are 1 set of CPU2UM/UM2CPU, 4 sets of PORTx2UM/UM2PORTx (x is 0-3, of which port 1 is port 1). The 4th beat of the outgoing message contains a time stamp.
 
-开发环境：
-五个FPGA OS的网表文件均在vivado 2018.3版本上生成。
+Development environment:
+The netlist files of the five FPGA OSs are all generated on the vivado 2018.3 version.
